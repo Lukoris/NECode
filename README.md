@@ -1,0 +1,2 @@
+# NECode
+Not Ending Code
