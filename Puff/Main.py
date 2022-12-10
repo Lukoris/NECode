@@ -15,12 +15,12 @@ import time
 
 class Label():
     '''
-    Класс label для формы
+    The label class for the form
     
-    Использует Label из tkinter|tk, отвечает за текст и визуал метки
+    Uses Label from tkinter|tk, responsible for label text and visual
     '''
     def __init__(self):
-        self._text = p_w.tk.StringVar() #Используется для дальнейшего изменения текста метки
+        self._text = p_w.tk.StringVar() #Used to permanently change the label text.
         self._text.set('Console enable (<>__<>)')
         self._label = p_w.tk.Label(p_w.p_window, 
                              bg='black',
@@ -31,14 +31,14 @@ class Label():
         self._text.set(E_text)
 
 
-#Определение метки для вывода данных программы
+#Defining a Label for Program Data Output.
 console = Label()
 console._label.place(x=0,y=740,width=1402+p_w.w, height=30)
 
     
 def main():
     while True:
-        #Обновление данных окна программы
+        #Updating program window data.
         p_w.p_window.update_idletasks()
         p_w.p_window.update()
         time.sleep(0.01)
@@ -46,4 +46,4 @@ def main():
 try:
     main()
 except p_w.tk.TclError:
-    print('Окно было закрыто.')
+    print('The window was closed.')
